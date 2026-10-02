@@ -49,15 +49,14 @@ public class ShoppingCart implements CartService {
     @Override
     public boolean removeProductFromCart(int productId) {
 
-        // for (CartItem item : cartItems) {
-        //     if(item.getProduct().getId() == productId) {
-        //         cartItems.remove(item);
-        //         System.out.println("Removed product from cart: " + item.getProduct().getName());
-        //         return true;
-        //     }
-        // }
-
-        // System.out.println("Product with ID " + productId + " not found in cart.");
+        for (CartItem item : cartItems) {
+            if(item.getProduct().getId() == productId) {
+                cartItems.remove(item);
+                System.out.println("Removed product from cart: " + item.getProduct().getName());
+                return true;
+            }
+        }
+        System.out.println("Product with ID " + productId + " not found in cart.");
         return false;
     }
 

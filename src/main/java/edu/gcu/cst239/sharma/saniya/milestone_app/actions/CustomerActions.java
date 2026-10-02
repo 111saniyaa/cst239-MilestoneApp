@@ -3,6 +3,7 @@ package edu.gcu.cst239.sharma.saniya.milestone_app.actions;
 import edu.gcu.cst239.sharma.saniya.milestone_app.util.InputUtilities;
 import edu.gcu.cst239.sharma.saniya.milestone_app.services.StoreFront;
 import edu.gcu.cst239.sharma.saniya.milestone_app.models.Product;
+import edu.gcu.cst239.sharma.saniya.milestone_app.models.InventoryItem;
 
 public class CustomerActions {
 
@@ -95,14 +96,33 @@ public class CustomerActions {
 
                     Product productToAdd = store.getInventoryManager().getInventoryItemByProductId(productIdToAdd).getProduct();
                     
+                    InventoryItem inventoryItem = store.getInventoryManager().getInventoryItemByProductId(productIdToAdd);
+
+                    if(inventoryItem == null) {
+                        System.out.println("Product with ID " + productIdToAdd + " not found in inventory.");
+                        break;
+                    }
+
+                    if(inventoryItem.getQuantityInStock() < quantityToAdd) {
+                        System.out.println("Not enough stock available. Available quantity: " + inventoryItem.getQuantityInStock());
+                        break;
+                    }
+
+                    if(quantityToAdd <= 0) {
+                        System.out.println("Quantity must be greater than zero.");
+                        break;
+                    }
+
                     store.getCartManager().addProduct(productToAdd, quantityToAdd);
-                    
+
                     break;
 
                 case 4: 
                     System.out.println("You choose to remove a product from the cart.");
-                    System.out.println("This is milestone #1. No actual fuctionality has been implemented yet.");
-                     break;
+
+                    int productIdToRemove = input.readInt("Enter the product ID to remove from the cart: ");
+                    store.getCartManager().removeProductFromCart(productIdToRemove);
+                    break;
 
                 case 5:
                     System.out.println("You choose to view the cart.");
