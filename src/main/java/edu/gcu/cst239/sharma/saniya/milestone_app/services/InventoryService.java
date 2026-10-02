@@ -89,4 +89,11 @@ public interface InventoryService {
      * Removes every item from the inventory.
      */
     void clearInventory();
+
+
+    // Methods for milestone 2
+
+    List<InventoryItem> getInventoryItemsSortedByName();
+    List<InventoryItem> getInventoryItemsSortedByPrice();
+    List<InventoryItem> getInventoryItemsSortedByDate();
 }

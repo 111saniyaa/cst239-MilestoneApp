@@ -206,4 +206,32 @@ public class InventoryManager implements InventoryService{
         inventory.clear();
     }
 
+
+    @Override 
+    public List<InventoryItem> getInventoryItemsSortedByName(){
+        // TODO Auto-generated method stub
+        List<InventoryItem> sortedList = new ArrayList<>(inventory);
+
+        return sortedList;
+    }
+
+    @Override
+    public List<InventoryItem> getInventoryItemsSortedByPrice(){
+        
+        // TODO Auto-generated method stub
+        List<InventoryItem> sortedList = new ArrayList<>(inventory);
+
+        return sortedList;
+    }
+
+    @Override 
+    public List<InventoryItem> getInventoryItemsSortedByDate(){
+        
+        // TODO Auto-generated method stub
+        List<InventoryItem> sortedList = new ArrayList<>(inventory);
+
+        return sortedList;
+    }
+
+
 }
