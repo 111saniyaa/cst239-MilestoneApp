@@ -1,7 +1,6 @@
 package edu.gcu.cst239.sharma.saniya.milestone_app.services;
 
 import java.util.List;
-import java.util.ArrayList;
 
 import edu.gcu.cst239.sharma.saniya.milestone_app.models.Product;
 import edu.gcu.cst239.sharma.saniya.milestone_app.models.CartItem;
@@ -51,6 +50,8 @@ public interface CartService {
 
     /** Removes every item from the cart. */
     void clearCart();
+
+    // void displayCartItems();
 
     
 }

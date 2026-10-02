@@ -126,7 +126,20 @@ public class CustomerActions {
 
                 case 5:
                     System.out.println("You choose to view the cart.");
-                    System.out.println("This is milestone #1. No actual fuctionality has been implemented yet.");
+
+                    store.getCartManager().getAllCartItems().forEach(item -> {
+                        System.out.println("Product ID: " + item.getProduct().getId());
+                        System.out.println("Product Name: " + item.getProduct().getName());
+                        System.out.println("Product Description: " + item.getProduct().getDescription());
+                        System.out.println("Product Date of Manufacture: " + item.getProduct().getDateOfManufacture());
+                        System.out.println("Product Price: $" + item.getProduct().getPrice());
+                        System.out.println("Product Category: " + item.getProduct().getCategory());
+                        System.out.println("Quantity in Cart: " + item.getQuantity());
+                        System.out.println("Subtotal for this item: $" + (item.getProduct().getPrice() * item.getQuantity()));
+                        System.out.println();
+                    });
+
+                    System.out.println("Total Cart Value: $" + store.getCartManager().getCartTotal());
                     break;
 
                 case 6:

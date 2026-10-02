@@ -62,8 +62,14 @@ public class ShoppingCart implements CartService {
 
     @Override
     public double getCartTotal() {
-        // TODO Auto-generated method stub
-        return 0;
+
+        double total = 0.0;
+
+        for (CartItem item : cartItems) {
+            total += item.getProduct().getPrice() * item.getQuantity();
+        }
+
+        return total;
     }
 
     @Override
@@ -80,8 +86,20 @@ public class ShoppingCart implements CartService {
 
     @Override
     public List<CartItem> getAllCartItems() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getAllCartItems'");
+        return List.copyOf(cartItems);
     }
+
+    // @Override 
+    // public void displayCartItems() {
+    //     if (cartItems.isEmpty()) {
+    //         System.out.println("Your cart is empty.");
+    //         return;
+    //     }
+
+    //     System.out.println("Current items in your cart:");
+    //     for (CartItem item : cartItems) {
+    //         System.out.println("Product: " + item.getProduct().getName() + ", Quantity: " + item.getQuantity() + ", Price: $" + item.getProduct().getPrice());
+    //     }
+    // }
     
 }
