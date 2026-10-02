@@ -61,6 +61,7 @@ public class StoreManagerActions {
                         System.out.println("You choose to search for a product by name.");
                         String nameToSearch = input.readString("Enter the product name to search for: ");
                         store.getInventoryManager().searchProductsByName(nameToSearch).forEach(item -> {
+                           
                             System.out.println("Product ID: " + item.getProduct().getId());
                             System.out.println("Product Name: " + item.getProduct().getName());
                             System.out.println("Product Description: " + item.getProduct().getDescription());
@@ -123,9 +124,8 @@ public class StoreManagerActions {
                         System.out.println("Failed to add product. Product ID may already exist.");
                     }
 
-
-                    
                     break;
+
                 case 4:
                     System.out.println("You choose to remove a product from inventory.");
 

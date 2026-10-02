@@ -10,12 +10,14 @@ package edu.gcu.cst239.sharma.saniya.milestone_app.services;
 public class StoreFront {
 
     private final InventoryService inventoryManager;
+    private final CartService cartManager;
 
     /**
      * Creates the storefront and its required services.
      */
     public StoreFront() {
         inventoryManager = new InventoryManager();
+        cartManager = new ShoppingCart();
     }
 
     /**
@@ -25,5 +27,14 @@ public class StoreFront {
      */
     public InventoryService getInventoryManager() {
         return inventoryManager;
+    }
+
+    /**
+     * Returns the service responsible for managing the shopping cart.
+     *
+     * @return the cart manager
+     */
+    public CartService getCartManager() {
+        return cartManager;
     }
 }

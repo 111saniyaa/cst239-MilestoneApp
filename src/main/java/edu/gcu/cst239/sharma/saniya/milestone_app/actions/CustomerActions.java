@@ -2,6 +2,7 @@ package edu.gcu.cst239.sharma.saniya.milestone_app.actions;
 
 import edu.gcu.cst239.sharma.saniya.milestone_app.util.InputUtilities;
 import edu.gcu.cst239.sharma.saniya.milestone_app.services.StoreFront;
+import edu.gcu.cst239.sharma.saniya.milestone_app.models.Product;
 
 public class CustomerActions {
 
@@ -88,7 +89,14 @@ public class CustomerActions {
 
                 case 3:
                     System.out.println("You choose to add a product to the cart.");
-                    System.out.println("This is milestone #1. No actual fuctionality has been implemented yet.");
+                    // input product ID and quantity
+                    int productIdToAdd = input.readInt("Enter the product ID to add to the cart: ");
+                    int quantityToAdd = input.readInt("Enter the quantity to add to the cart: ");
+
+                    Product productToAdd = store.getInventoryManager().getInventoryItemByProductId(productIdToAdd).getProduct();
+                    
+                    store.getCartManager().addProduct(productToAdd, quantityToAdd);
+                    
                     break;
 
                 case 4: 
