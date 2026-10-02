@@ -74,13 +74,20 @@ public class ShoppingCart implements CartService {
 
     @Override
     public boolean checkout() {
-        // TODO Auto-generated method stub
-        return false;
+        if (cartItems.isEmpty()) {
+            System.out.println("Cart is empty. Cannot proceed to checkout.");
+            return false;
+        }
+        
+        System.out.println("Checkout complete. Cart is now empty.");
+        return true;
     }
 
     @Override
     public void clearCart() {
         // TODO Auto-generated method stub
+        cartItems.clear();
+        System.out.println("Cart cleared.");
         
     }
 

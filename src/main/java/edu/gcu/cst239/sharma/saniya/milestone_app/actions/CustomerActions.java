@@ -3,6 +3,10 @@ package edu.gcu.cst239.sharma.saniya.milestone_app.actions;
 import edu.gcu.cst239.sharma.saniya.milestone_app.util.InputUtilities;
 import edu.gcu.cst239.sharma.saniya.milestone_app.services.StoreFront;
 import edu.gcu.cst239.sharma.saniya.milestone_app.models.Product;
+
+import java.util.List;
+
+import edu.gcu.cst239.sharma.saniya.milestone_app.models.CartItem;
 import edu.gcu.cst239.sharma.saniya.milestone_app.models.InventoryItem;
 
 public class CustomerActions {
@@ -94,14 +98,16 @@ public class CustomerActions {
                     int productIdToAdd = input.readInt("Enter the product ID to add to the cart: ");
                     int quantityToAdd = input.readInt("Enter the quantity to add to the cart: ");
 
-                    Product productToAdd = store.getInventoryManager().getInventoryItemByProductId(productIdToAdd).getProduct();
-                    
-                    InventoryItem inventoryItem = store.getInventoryManager().getInventoryItemByProductId(productIdToAdd);
 
+                    InventoryItem inventoryItem = store.getInventoryManager().getInventoryItemByProductId(productIdToAdd);
+                    
                     if(inventoryItem == null) {
                         System.out.println("Product with ID " + productIdToAdd + " not found in inventory.");
                         break;
                     }
+                    
+                    Product productToAdd = store.getInventoryManager().getInventoryItemByProductId(productIdToAdd).getProduct();
+                    
 
                     if(inventoryItem.getQuantityInStock() < quantityToAdd) {
                         System.out.println("Not enough stock available. Available quantity: " + inventoryItem.getQuantityInStock());
@@ -113,7 +119,21 @@ public class CustomerActions {
                         break;
                     }
 
-                    store.getCartManager().addProduct(productToAdd, quantityToAdd);
+                    List<CartItem> currentCartItems = store.getCartManager().getAllCartItems();
+
+                    boolean addOrUpdate = true;
+                    for(CartItem item : currentCartItems) {
+                        if(item.getProduct().getId() == productIdToAdd) {
+                            System.out.println("Product with ID " + productIdToAdd + " is already in the cart. Updating quantity.");
+                            store.getCartManager().updateQuantity(productIdToAdd, item.getQuantity() + quantityToAdd);
+                            addOrUpdate = false;
+                            break;
+                        }
+                    }
+
+                    if(addOrUpdate) {
+                        store.getCartManager().addProduct(productToAdd, quantityToAdd);
+                    }
 
                     break;
 
@@ -144,7 +164,43 @@ public class CustomerActions {
 
                 case 6:
                     System.out.println("You choose to checkout.");
-                    System.out.println("This is milestone #1. No actual fuctionality has been implemented yet.");   
+                    
+                    if(store.getCartManager().checkout()) {
+                        System.out.println("Checkout successful. Thank you for your purchase!");
+
+                        List<CartItem> cartItems = store.getCartManager().getAllCartItems();
+
+                        for (CartItem item : cartItems) {
+
+                            int productId = item.getProduct().getId();
+                            int cartQuantityToremove = item.getQuantity();
+
+                            int inventoryQuatityInStock = store.getInventoryManager().getInventoryItemByProductId(productId).getQuantityInStock();
+
+                            
+                            InventoryItem currentInventoryItem = store.getInventoryManager().getInventoryItemByProductId(productId);
+
+                            if(currentInventoryItem == null) {
+                                System.out.println("Product with ID " + productId + " not found in inventory.");
+                                System.out.println("Checkout failed. Please try again.");
+                                break;
+                            }
+
+                            if(currentInventoryItem.getQuantityInStock() < cartQuantityToremove) {
+                                System.out.println("Not enough stock available for Product ID: " + productId + ". Available quantity: " + currentInventoryItem.getQuantityInStock());
+                                System.out.println("Checkout failed. Please try again.");
+                                break;
+                            }
+
+                            store.getInventoryManager().updateQuantity(productId, inventoryQuatityInStock - cartQuantityToremove);
+                        }
+
+                        store.getCartManager().clearCart();
+                        System.out.println("Checkout complete. Cart is now empty.");
+
+                    } else {
+                        System.out.println("Checkout failed. Please try again.");
+                    }
 
                     break;
 
