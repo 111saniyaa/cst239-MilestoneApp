@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Locale;
+import java.util.Comparator; 
 
 import edu.gcu.cst239.sharma.saniya.milestone_app.models.InventoryItem;
 import edu.gcu.cst239.sharma.saniya.milestone_app.models.Product;
@@ -208,30 +209,38 @@ public class InventoryManager implements InventoryService{
 
 
     @Override 
-    public List<InventoryItem> getInventoryItemsSortedByName(){
-        // TODO Auto-generated method stub
-        List<InventoryItem> sortedList = new ArrayList<>(inventory);
+public List<InventoryItem> getInventoryItemsSortedByName(){
 
-        return sortedList;
-    }
+    List<InventoryItem> sortedList = new ArrayList<>(inventory);
 
-    @Override
-    public List<InventoryItem> getInventoryItemsSortedByPrice(){
-        
-        // TODO Auto-generated method stub
-        List<InventoryItem> sortedList = new ArrayList<>(inventory);
+    sortedList.sort(
+        Comparator.comparing(item -> item.getProduct().getName())
+    );
 
-        return sortedList;
-    }
+    return sortedList;
+}
 
-    @Override 
-    public List<InventoryItem> getInventoryItemsSortedByDate(){
-        
-        // TODO Auto-generated method stub
-        List<InventoryItem> sortedList = new ArrayList<>(inventory);
+@Override
+public List<InventoryItem> getInventoryItemsSortedByPrice(){
 
-        return sortedList;
-    }
+    List<InventoryItem> sortedList = new ArrayList<>(inventory);
 
+    sortedList.sort(
+        Comparator.comparingDouble(item -> item.getProduct().getPrice())
+    );
 
+    return sortedList;
+}
+
+@Override 
+public List<InventoryItem> getInventoryItemsSortedByDate(){
+
+    List<InventoryItem> sortedList = new ArrayList<>(inventory);
+
+    sortedList.sort(
+        Comparator.comparing(item -> item.getProduct().getDateOfManufacture())
+    );
+
+    return sortedList;
+}
 }

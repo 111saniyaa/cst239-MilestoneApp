@@ -35,26 +35,39 @@ public class CustomerActions {
             int choice = input.readInt("Enter 1, 2, 3, 4, 5, 6 or 0: ", 0, 6);
             switch (choice) {
                 case 1:
-                    System.out.println("You choose to view products.");
+    System.out.println("You choose to view products.");
 
-                    /*
-                    store.getInventoryManager().getAllInventoryItems().forEach(item -> {
-                        System.out.println(item);
-                    });
-                    */
+    System.out.println("Sort products by:");
+    System.out.println("1. Name");
+    System.out.println("2. Price");
+    System.out.println("3. Date");
 
-                    store.getInventoryManager().getAllInventoryItems().forEach(item -> {
-                        System.out.println("Product ID: " + item.getProduct().getId());
-                        System.out.println("Product Name: " + item.getProduct().getName());
-                        System.out.println("Product Description: " + item.getProduct().getDescription());
-                        System.out.println("Product Date of Manufacture: " + item.getProduct().getDateOfManufacture());
-                        System.out.println("Product Price: $" + item.getProduct().getPrice());
-                        System.out.println("Product Category: " + item.getProduct().getCategory());
-                        System.out.println("Quantity in Stock: " + item.getQuantityInStock());
-                        System.out.println();
-                    });
-                    break;
+    int sortChoice = input.readInt("Enter 1, 2, or 3: ", 1, 3);
 
+    List<InventoryItem> products;
+
+    if (sortChoice == 1) {
+        products = store.getInventoryManager().getInventoryItemsSortedByName();
+    } 
+    else if (sortChoice == 2) {
+        products = store.getInventoryManager().getInventoryItemsSortedByPrice();
+    } 
+    else {
+        products = store.getInventoryManager().getInventoryItemsSortedByDate();
+    }
+
+    products.forEach(item -> {
+        System.out.println("Product ID: " + item.getProduct().getId());
+        System.out.println("Product Name: " + item.getProduct().getName());
+        System.out.println("Product Description: " + item.getProduct().getDescription());
+        System.out.println("Product Date of Manufacture: " + item.getProduct().getDateOfManufacture());
+        System.out.println("Product Price: $" + item.getProduct().getPrice());
+        System.out.println("Product Category: " + item.getProduct().getCategory());
+        System.out.println("Quantity in Stock: " + item.getQuantityInStock());
+        System.out.println();
+    });
+
+    break;
                 case 2:
                     System.out.println("Do you want to search by name or description?");
 
@@ -145,23 +158,51 @@ public class CustomerActions {
                     break;
 
                 case 5:
-                    System.out.println("You choose to view the cart.");
+    System.out.println("You choose to view the cart.");
 
-                    store.getCartManager().getAllCartItems().forEach(item -> {
-                        System.out.println("Product ID: " + item.getProduct().getId());
-                        System.out.println("Product Name: " + item.getProduct().getName());
-                        System.out.println("Product Description: " + item.getProduct().getDescription());
-                        System.out.println("Product Date of Manufacture: " + item.getProduct().getDateOfManufacture());
-                        System.out.println("Product Price: $" + item.getProduct().getPrice());
-                        System.out.println("Product Category: " + item.getProduct().getCategory());
-                        System.out.println("Quantity in Cart: " + item.getQuantity());
-                        System.out.println("Subtotal for this item: $" + (item.getProduct().getPrice() * item.getQuantity()));
-                        System.out.println();
-                    });
+    store.getCartManager().getAllCartItems().forEach(item -> {
+        System.out.println("Product ID: " + item.getProduct().getId());
+        System.out.println("Product Name: " + item.getProduct().getName());
+        System.out.println("Product Description: " + item.getProduct().getDescription());
+        System.out.println("Product Price: $" + item.getProduct().getPrice());
+        System.out.println("Quantity in Cart: " + item.getQuantity());
+        System.out.println("Subtotal: $" + 
+            (item.getProduct().getPrice() * item.getQuantity()));
+        System.out.println();
+    });
 
-                    System.out.println("Total Cart Value: $" + store.getCartManager().getCartTotal());
-                    break;
+    System.out.println("Total Cart Value: $" + 
+        store.getCartManager().getCartTotal());
 
+    if (!store.getCartManager().getAllCartItems().isEmpty()) {
+
+        String updateChoice = input.readString(
+            "Would you like to change a quantity? Enter yes or no: "
+        );
+
+        if (updateChoice.equalsIgnoreCase("yes")) {
+
+            int productId = input.readInt(
+                "Enter the product ID you want to update: "
+            );
+
+            int newQuantity = input.readInt(
+                "Enter the new quantity: "
+            );
+
+
+            boolean updated = store.getCartManager()
+                    .updateQuantity(productId, newQuantity);
+
+            if (updated) {
+                System.out.println("Quantity updated successfully.");
+            } else {
+                System.out.println("Quantity could not be updated.");
+            }
+        }
+    }
+
+    break;
                 case 6:
                     System.out.println("You choose to checkout.");
                     
