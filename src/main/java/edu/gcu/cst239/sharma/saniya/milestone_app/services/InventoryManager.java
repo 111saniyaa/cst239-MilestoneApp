@@ -3,7 +3,9 @@ package edu.gcu.cst239.sharma.saniya.milestone_app.services;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Locale;
+import java.util.Objects;
 import java.util.Comparator; 
 
 import edu.gcu.cst239.sharma.saniya.milestone_app.models.InventoryItem;
@@ -16,6 +18,21 @@ public class InventoryManager implements InventoryService{
     public InventoryManager() {
         inventory = new ArrayList<>();
         initializeInventory();
+    }
+
+    // 
+
+    public InventoryManager(Collection<InventoryItem> items) {
+        
+        Objects.requireNonNull(items, "Inventory items collection cannot be null");
+        inventory = new ArrayList<>(items);
+
+        for(InventoryItem item : inventory) {
+            if(item == null || item.getProduct() == null) {
+                throw new IllegalArgumentException("Inventory items and their products cannot be null");
+            }
+        }
+
     }
 
 
