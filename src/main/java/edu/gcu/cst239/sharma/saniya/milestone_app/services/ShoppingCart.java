@@ -18,7 +18,22 @@ public class ShoppingCart implements CartService {
 
     @Override
     public boolean addProduct(Product product, int quantity) {
-        // TODO Auto-generated method stub
+         if (product == null) {
+            System.out.println("Product cannot be null.");
+            return false;
+        }
+        if (quantity <= 0) {
+            System.out.println("Quantity must be greater than zero.");
+            return false;
+        }
+
+        for (CartItem item : cartItems) {
+            if (item.getProduct().getId() == product.getId()) {
+                item.setQuantity(item.getQuantity() + quantity);
+                System.out.println("Increased quantity for product: " + product.getName() + " to " + item.getQuantity());
+                return true;
+            }
+        }
 
         boolean result = cartItems.add(new CartItem(product, quantity));
         if (result) {
@@ -33,6 +48,11 @@ public class ShoppingCart implements CartService {
     @Override
     public boolean updateQuantity(int productId, int quantity) {
         
+        if (quantity <= 0) {
+            System.out.println("Quantity must be greater than zero.");
+            return false;
+        }
+
         // first we will check if the product exists in the cart
         for (CartItem item : cartItems) {
             if(item.getProduct().getId() == productId) {
