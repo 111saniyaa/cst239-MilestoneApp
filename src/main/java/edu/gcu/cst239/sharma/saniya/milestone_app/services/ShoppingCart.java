@@ -4,14 +4,29 @@ import java.util.List;
 import java.util.ArrayList;
 
 import edu.gcu.cst239.sharma.saniya.milestone_app.models.CartItem;
+import edu.gcu.cst239.sharma.saniya.milestone_app.models.InventoryItem;
 import edu.gcu.cst239.sharma.saniya.milestone_app.models.Product;
 
 public class ShoppingCart implements CartService {
 
     private final List<CartItem> cartItems;
+    private final InventoryService inventory;
 
     public ShoppingCart() {
         cartItems = new ArrayList<>();
+        this.inventory = null;
+    }
+
+    /**
+     * Creates a cart that verifies and reduces stock through the supplied
+     * inventory service during checkout.
+     *
+     * @param inventory the inventory service used to verify and reduce stock;
+     *                  when null, checkout of a non-empty cart fails
+     */
+    public ShoppingCart(InventoryService inventory) {
+        this.inventory = inventory;
+        this.cartItems = new ArrayList<>();
     }
 
 
@@ -98,7 +113,27 @@ public class ShoppingCart implements CartService {
             System.out.println("Cart is empty. Cannot proceed to checkout.");
             return false;
         }
-        
+
+        // Phase 1: verify every line before any stock is changed, so a
+        // failed checkout never partially reduces inventory.
+        for (CartItem item : cartItems) {
+            InventoryItem stock = (inventory == null)
+                    ? null
+                    : inventory.getInventoryItemByProductId(item.getProduct().getId());
+            if (stock == null || stock.getQuantityInStock() < item.getQuantity()) {
+                System.out.println("Checkout failed: insufficient or missing stock for product ID "
+                        + item.getProduct().getId() + ".");
+                return false;
+            }
+        }
+
+        // Phase 2: all lines verified — reduce stock for every line.
+        for (CartItem item : cartItems) {
+            inventory.getInventoryItemByProductId(item.getProduct().getId())
+                    .decreaseQuantity(item.getQuantity());
+        }
+
+        cartItems.clear();
         System.out.println("Checkout complete. Cart is now empty.");
         return true;
     }
