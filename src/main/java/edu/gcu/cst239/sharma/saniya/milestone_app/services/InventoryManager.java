@@ -46,15 +46,31 @@ public class InventoryManager implements InventoryService{
 
 
     private void initializeInventory(){
-        List<InventoryItem> loadedInventory = productJsonService.readInventory(productsFilePath, inventoryFilePath);
-        inventory.addAll(loadedInventory);
-
+        readInventoryFromJson();
     }
 
 
+
+    @Override
+    public void readInventoryFromJson() {
+        List<InventoryItem> loadedInventory = productJsonService.readInventory(productsFilePath, inventoryFilePath);
+        inventory.addAll(loadedInventory);
+    }
+
+    @Override 
+    public void saveInventoryToJson() {
+        try{
+            productJsonService.writeInventoryItems(productsFilePath, inventoryFilePath, inventory);
+        }catch(Exception e){
+            System.err.println("Error saving inventory to JSON: " + e.getMessage());
+        }
+    }
+
+    
+
     @Override
     public List<InventoryItem> getAllInventoryItems() {
-        // TODO Auto-generated method stub
+        
         return List.copyOf(inventory);
     }
 
@@ -72,7 +88,7 @@ public class InventoryManager implements InventoryService{
 
     @Override
     public List<InventoryItem> searchProductsByName(String searchTerm) {
-        // TODO Auto-generated method stub
+        
 
         String normalizedTerm = searchTerm.trim().toLowerCase(Locale.ROOT);
 
@@ -92,7 +108,7 @@ public class InventoryManager implements InventoryService{
 
     @Override
     public List<InventoryItem> searchProductsByDescription(String searchTerm) {
-        // TODO Auto-generated method stub
+        
         String normalizedTerm = searchTerm.trim().toLowerCase(Locale.ROOT);
 
         List<InventoryItem> matches = new ArrayList<>();
@@ -110,7 +126,7 @@ public class InventoryManager implements InventoryService{
 
     @Override
     public boolean addInventoryItem(InventoryItem item) {
-        // TODO Auto-generated method stub
+        
         if (item == null || item.getProduct() == null) {
             return false;
         }
@@ -125,7 +141,7 @@ public class InventoryManager implements InventoryService{
 
     @Override
     public boolean updateProduct(Product updatedProduct) {
-        // TODO Auto-generated method stub
+        
 
         for(int index = 0; index < inventory.size(); index++) {
             InventoryItem currentItem = inventory.get(index);
@@ -146,7 +162,7 @@ public class InventoryManager implements InventoryService{
 
     @Override
     public boolean updateQuantity(int productId, int quantityInStock) {
-        // TODO Auto-generated method stub
+        
 
         //Product product = getInventoryItemByProductId(productId).getProduct();
 
@@ -166,7 +182,7 @@ public class InventoryManager implements InventoryService{
 
     @Override
     public boolean removeProductById(int productId) {
-        // TODO Auto-generated method stub
+        
 
         InventoryItem item = getInventoryItemByProductId(productId);
 
@@ -178,7 +194,7 @@ public class InventoryManager implements InventoryService{
 
     @Override
     public void clearInventory() {
-        // TODO Auto-generated method stub
+        
         inventory.clear();
     }
 
