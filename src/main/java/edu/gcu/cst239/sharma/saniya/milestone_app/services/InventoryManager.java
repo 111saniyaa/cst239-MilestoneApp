@@ -54,6 +54,10 @@ public class InventoryManager implements InventoryService{
     @Override
     public void readInventoryFromJson() {
         List<InventoryItem> loadedInventory = productJsonService.readInventory(productsFilePath, inventoryFilePath);
+        // Clear the current inventory and add all loaded items
+        inventory.clear();
+
+        // Add all loaded items to the inventory
         inventory.addAll(loadedInventory);
     }
 
@@ -66,7 +70,7 @@ public class InventoryManager implements InventoryService{
         }
     }
 
-    
+
 
     @Override
     public List<InventoryItem> getAllInventoryItems() {

@@ -25,7 +25,7 @@ public class ProductJsonService {
     // object mapper for JSON serialization and deserialization
     private final ObjectMapper objectMapper = new ObjectMapper().enable(SerializationFeature.INDENT_OUTPUT);
 
-    public List<ProductDto> readDtos(Path filePath) {
+    public List<ProductDto> readProductDtos(Path filePath) {
         try {
             // Read the JSON file and convert it to a list of ProductDto objects
             return objectMapper.readValue( filePath.toFile(), new TypeReference<List<ProductDto>>() {});
@@ -38,7 +38,7 @@ public class ProductJsonService {
     }
 
 
-    public List<InventoryItemDto> readInventoryItems(Path filePath) {
+    public List<InventoryItemDto> readInventoryItemsDtos(Path filePath) {
         try {
             // Read the JSON file and convert it to a list of InventoryItemDto objects
             return objectMapper.readValue(filePath.toFile(), new TypeReference<List<InventoryItemDto>>() {});
@@ -53,7 +53,9 @@ public class ProductJsonService {
     public  List<Product> readProducts(Path filePath) {
         
         // First we will read the ProductDto objects from the JSON file, 
-        List<ProductDto> productDtos = readDtos(filePath);
+        List<ProductDto> productDtos = readProductDtos(filePath);
+
+        System.out.println("IMPORTANT : Read " + productDtos.size() + " ProductDto objects from " + filePath);
         
         // then we will map them to Product objects using the ProductMapper.
         return productDtos.stream()
@@ -68,7 +70,7 @@ public class ProductJsonService {
         List<Product> products = readProducts(productFilePath);
 
         // Read the inventory items dto (just id and quantity) from the inventory JSON file
-        List<InventoryItemDto> inventoryItemDtos = readInventoryItems(inventoryFilePath);
+        List<InventoryItemDto> inventoryItemDtos = readInventoryItemsDtos(inventoryFilePath);
 
 
         // Map the InventoryItemDto to InventoryItem using the corresponding Product (based on product id)
