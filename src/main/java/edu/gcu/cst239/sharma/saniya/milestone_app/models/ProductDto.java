@@ -7,6 +7,8 @@ public record ProductDto(
         String dateOfManufacture, // Keeping Date as string, so the JSON contract remains simple and language-neutral
         double price,
         String category) {
+
+                
 }
 
 
