@@ -4,7 +4,6 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
-import java.time.LocalDate;
 
 public class InventorySortingTest {
     
