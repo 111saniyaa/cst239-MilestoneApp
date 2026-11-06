@@ -1,7 +1,5 @@
 package edu.gcu.cst239.sharma.saniya.milestone_app.services;
 
-import edu.gcu.cst239.sharma.saniya.milestone_app.services.ShoppingCart;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;

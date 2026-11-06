@@ -1,0 +1,301 @@
+[ {
+  "id" : 1,
+  "quantityInStock" : 70
+}, {
+  "id" : 2,
+  "quantityInStock" : 93
+}, {
+  "id" : 3,
+  "quantityInStock" : 80
+}, {
+  "id" : 4,
+  "quantityInStock" : 45
+}, {
+  "id" : 5,
+  "quantityInStock" : 71
+}, {
+  "id" : 6,
+  "quantityInStock" : 31
+}, {
+  "id" : 7,
+  "quantityInStock" : 27
+}, {
+  "id" : 8,
+  "quantityInStock" : 91
+}, {
+  "id" : 9,
+  "quantityInStock" : 25
+}, {
+  "id" : 10,
+  "quantityInStock" : 81
+}, {
+  "id" : 11,
+  "quantityInStock" : 88
+}, {
+  "id" : 12,
+  "quantityInStock" : 89
+}, {
+  "id" : 13,
+  "quantityInStock" : 52
+}, {
+  "id" : 14,
+  "quantityInStock" : 95
+}, {
+  "id" : 15,
+  "quantityInStock" : 67
+}, {
+  "id" : 16,
+  "quantityInStock" : 85
+}, {
+  "id" : 17,
+  "quantityInStock" : 51
+}, {
+  "id" : 18,
+  "quantityInStock" : 85
+}, {
+  "id" : 19,
+  "quantityInStock" : 95
+}, {
+  "id" : 20,
+  "quantityInStock" : 60
+}, {
+  "id" : 21,
+  "quantityInStock" : 56
+}, {
+  "id" : 22,
+  "quantityInStock" : 87
+}, {
+  "id" : 23,
+  "quantityInStock" : 95
+}, {
+  "id" : 24,
+  "quantityInStock" : 95
+}, {
+  "id" : 25,
+  "quantityInStock" : 82
+}, {
+  "id" : 26,
+  "quantityInStock" : 78
+}, {
+  "id" : 27,
+  "quantityInStock" : 60
+}, {
+  "id" : 28,
+  "quantityInStock" : 39
+}, {
+  "id" : 29,
+  "quantityInStock" : 37
+}, {
+  "id" : 30,
+  "quantityInStock" : 47
+}, {
+  "id" : 31,
+  "quantityInStock" : 64
+}, {
+  "id" : 32,
+  "quantityInStock" : 23
+}, {
+  "id" : 33,
+  "quantityInStock" : 32
+}, {
+  "id" : 34,
+  "quantityInStock" : 23
+}, {
+  "id" : 35,
+  "quantityInStock" : 48
+}, {
+  "id" : 36,
+  "quantityInStock" : 33
+}, {
+  "id" : 37,
+  "quantityInStock" : 97
+}, {
+  "id" : 38,
+  "quantityInStock" : 70
+}, {
+  "id" : 39,
+  "quantityInStock" : 71
+}, {
+  "id" : 40,
+  "quantityInStock" : 48
+}, {
+  "id" : 41,
+  "quantityInStock" : 33
+}, {
+  "id" : 42,
+  "quantityInStock" : 20
+}, {
+  "id" : 43,
+  "quantityInStock" : 43
+}, {
+  "id" : 44,
+  "quantityInStock" : 44
+}, {
+  "id" : 45,
+  "quantityInStock" : 49
+}, {
+  "id" : 46,
+  "quantityInStock" : 21
+}, {
+  "id" : 47,
+  "quantityInStock" : 99
+}, {
+  "id" : 48,
+  "quantityInStock" : 36
+}, {
+  "id" : 49,
+  "quantityInStock" : 28
+}, {
+  "id" : 50,
+  "quantityInStock" : 79
+}, {
+  "id" : 51,
+  "quantityInStock" : 39
+}, {
+  "id" : 52,
+  "quantityInStock" : 57
+}, {
+  "id" : 53,
+  "quantityInStock" : 86
+}, {
+  "id" : 54,
+  "quantityInStock" : 67
+}, {
+  "id" : 55,
+  "quantityInStock" : 61
+}, {
+  "id" : 56,
+  "quantityInStock" : 40
+}, {
+  "id" : 57,
+  "quantityInStock" : 50
+}, {
+  "id" : 58,
+  "quantityInStock" : 50
+}, {
+  "id" : 59,
+  "quantityInStock" : 99
+}, {
+  "id" : 60,
+  "quantityInStock" : 50
+}, {
+  "id" : 61,
+  "quantityInStock" : 58
+}, {
+  "id" : 62,
+  "quantityInStock" : 45
+}, {
+  "id" : 63,
+  "quantityInStock" : 31
+}, {
+  "id" : 64,
+  "quantityInStock" : 79
+}, {
+  "id" : 65,
+  "quantityInStock" : 54
+}, {
+  "id" : 66,
+  "quantityInStock" : 97
+}, {
+  "id" : 67,
+  "quantityInStock" : 61
+}, {
+  "id" : 68,
+  "quantityInStock" : 71
+}, {
+  "id" : 69,
+  "quantityInStock" : 24
+}, {
+  "id" : 70,
+  "quantityInStock" : 59
+}, {
+  "id" : 71,
+  "quantityInStock" : 25
+}, {
+  "id" : 72,
+  "quantityInStock" : 82
+}, {
+  "id" : 73,
+  "quantityInStock" : 44
+}, {
+  "id" : 74,
+  "quantityInStock" : 38
+}, {
+  "id" : 75,
+  "quantityInStock" : 49
+}, {
+  "id" : 76,
+  "quantityInStock" : 35
+}, {
+  "id" : 77,
+  "quantityInStock" : 74
+}, {
+  "id" : 78,
+  "quantityInStock" : 73
+}, {
+  "id" : 79,
+  "quantityInStock" : 81
+}, {
+  "id" : 80,
+  "quantityInStock" : 24
+}, {
+  "id" : 81,
+  "quantityInStock" : 84
+}, {
+  "id" : 82,
+  "quantityInStock" : 80
+}, {
+  "id" : 83,
+  "quantityInStock" : 47
+}, {
+  "id" : 84,
+  "quantityInStock" : 47
+}, {
+  "id" : 85,
+  "quantityInStock" : 37
+}, {
+  "id" : 86,
+  "quantityInStock" : 76
+}, {
+  "id" : 87,
+  "quantityInStock" : 70
+}, {
+  "id" : 88,
+  "quantityInStock" : 61
+}, {
+  "id" : 89,
+  "quantityInStock" : 94
+}, {
+  "id" : 90,
+  "quantityInStock" : 49
+}, {
+  "id" : 91,
+  "quantityInStock" : 24
+}, {
+  "id" : 92,
+  "quantityInStock" : 46
+}, {
+  "id" : 93,
+  "quantityInStock" : 63
+}, {
+  "id" : 94,
+  "quantityInStock" : 57
+}, {
+  "id" : 95,
+  "quantityInStock" : 36
+}, {
+  "id" : 96,
+  "quantityInStock" : 27
+}, {
+  "id" : 97,
+  "quantityInStock" : 22
+}, {
+  "id" : 98,
+  "quantityInStock" : 70
+}, {
+  "id" : 99,
+  "quantityInStock" : 65
+}, {
+  "id" : 100,
+  "quantityInStock" : 68
+}]

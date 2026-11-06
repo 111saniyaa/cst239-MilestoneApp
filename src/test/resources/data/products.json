@@ -1,0 +1,701 @@
+[ {
+  "id" : 1,
+  "name" : "Chocolate Coconut Protein Balls",
+  "description" : "No-bake protein balls with chocolate and coconut flavors.",
+  "dateOfManufacture" : "2026-01-18",
+  "price" : 2.99,
+  "category" : "Food - Snacks"
+}, {
+  "id" : 2,
+  "name" : "Chocolate Fudge Ice Cream",
+  "description" : "Rich and creamy chocolate fudge ice cream for dessert.",
+  "dateOfManufacture" : "2026-04-17",
+  "price" : 5.99,
+  "category" : "Food - Frozen Desserts"
+}, {
+  "id" : 3,
+  "name" : "Vanilla Protein Powder",
+  "description" : "A high-quality protein powder perfect for smoothies and baking.",
+  "dateOfManufacture" : "2026-03-30",
+  "price" : 24.99,
+  "category" : "Food - Health/Protein"
+}, {
+  "id" : 4,
+  "name" : "Coffee Maker",
+  "description" : "Single-serve coffee maker with a built-in grinder.",
+  "dateOfManufacture" : "2025-11-06",
+  "price" : 89.99,
+  "category" : "Kitchen"
+}, {
+  "id" : 5,
+  "name" : "Vegetable Fried Rice",
+  "description" : "Quick and easy fried rice mixed with vegetables and soy sauce.",
+  "dateOfManufacture" : "2026-10-11",
+  "price" : 4.99,
+  "category" : "Food - Frozen Foods"
+}, {
+  "id" : 6,
+  "name" : "Savory Snack Mix",
+  "description" : "A mix of nuts, pretzels, and crackers, seasoned just right for snacking.",
+  "dateOfManufacture" : "2026-01-31",
+  "price" : 4.49,
+  "category" : "Food - Snacks"
+}, {
+  "id" : 7,
+  "name" : "Baking Powder",
+  "description" : "Essential ingredient for baking fluffy cakes and pastries.",
+  "dateOfManufacture" : "2026-04-29",
+  "price" : 1.79,
+  "category" : "Food - Baking Goods"
+}, {
+  "id" : 8,
+  "name" : "Wrap Front Midi Skirt",
+  "description" : "Elegant midi skirt with a wrap design, great for both formal and casual events.",
+  "dateOfManufacture" : "2026-02-25",
+  "price" : 44.99,
+  "category" : "Clothing - Bottoms"
+}, {
+  "id" : 9,
+  "name" : "Summer Tank Dress",
+  "description" : "A lightweight tank dress, ideal for warm weather outings.",
+  "dateOfManufacture" : "2026-05-10",
+  "price" : 39.99,
+  "category" : "Clothing - Dresses"
+}, {
+  "id" : 10,
+  "name" : "Vegetable and Cheese Quesadillas",
+  "description" : "Flour tortilla filled with cheese and a medley of vegetables.",
+  "dateOfManufacture" : "2026-08-05",
+  "price" : 6.99,
+  "category" : "Food - Frozen"
+}, {
+  "id" : 11,
+  "name" : "Kettle BBQ Grill",
+  "description" : "Charcoal kettle grill perfect for backyard barbecues.",
+  "dateOfManufacture" : "2026-07-26",
+  "price" : 99.99,
+  "category" : "Outdoor"
+}, {
+  "id" : 12,
+  "name" : "Carrot Ginger Soup",
+  "description" : "Smooth soup made from carrots and ginger, great for cold days.",
+  "dateOfManufacture" : "2026-08-09",
+  "price" : 4.29,
+  "category" : "Food - Soups"
+}, {
+  "id" : 13,
+  "name" : "Creamy Garlic Mashed Potatoes",
+  "description" : "Rich and buttery mashed potatoes with roasted garlic.",
+  "dateOfManufacture" : "2026-09-20",
+  "price" : 3.99,
+  "category" : "Food - Sides"
+}, {
+  "id" : 14,
+  "name" : "Herbal Tea Sampler Box",
+  "description" : "Assorted collection of herbal teas for relaxation and wellness.",
+  "dateOfManufacture" : "2026-09-10",
+  "price" : 29.99,
+  "category" : "Food"
+}, {
+  "id" : 15,
+  "name" : "Chicken Broth",
+  "description" : "Rich and flavorful chicken broth, great for soups.",
+  "dateOfManufacture" : "2025-12-23",
+  "price" : 2.49,
+  "category" : "Food - Canned Goods"
+}, {
+  "id" : 16,
+  "name" : "Compact Shoe Rack",
+  "description" : "Space-efficient shoe rack to keep entryways organized.",
+  "dateOfManufacture" : "2026-09-15",
+  "price" : 34.99,
+  "category" : "Home"
+}, {
+  "id" : 17,
+  "name" : "Ethically-Sourced Coffee Beans",
+  "description" : "Freshly roasted coffee beans with rich flavor.",
+  "dateOfManufacture" : "2026-01-21",
+  "price" : 9.99,
+  "category" : "Food - Beverages"
+}, {
+  "id" : 18,
+  "name" : "Thai Basil Fried Rice",
+  "description" : "Fragrant fried rice with authentic Thai basil and veggies.",
+  "dateOfManufacture" : "2026-08-25",
+  "price" : 5.99,
+  "category" : "Food - Frozen"
+}, {
+  "id" : 19,
+  "name" : "Aged White Cheddar Popcorn",
+  "description" : "Light and fluffy popcorn coated in aged white cheddar.",
+  "dateOfManufacture" : "2025-11-29",
+  "price" : 2.99,
+  "category" : "Food - Snacks"
+}, {
+  "id" : 20,
+  "name" : "Outdoor Camping Lantern",
+  "description" : "Rechargeable LED lantern ideal for camping and outdoor activities.",
+  "dateOfManufacture" : "2026-07-25",
+  "price" : 34.99,
+  "category" : "Outdoor"
+}, {
+  "id" : 21,
+  "name" : "Pet First Aid Kit",
+  "description" : "Essential kit for taking care of your pets' health emergencies.",
+  "dateOfManufacture" : "2026-02-08",
+  "price" : 29.99,
+  "category" : "Pets"
+}, {
+  "id" : 22,
+  "name" : "Mixed Nuts",
+  "description" : "A blend of assorted nuts, perfect for snacking or adding to recipes.",
+  "dateOfManufacture" : "2026-07-20",
+  "price" : 5.99,
+  "category" : "Food - Snacks"
+}, {
+  "id" : 23,
+  "name" : "Organic Whole Grain Oats",
+  "description" : "Whole grain oats that are perfect for breakfast or baking.",
+  "dateOfManufacture" : "2026-07-04",
+  "price" : 2.49,
+  "category" : "Food - Breakfast"
+}, {
+  "id" : 24,
+  "name" : "Fruit and Nut Bars",
+  "description" : "Individually packaged bars made with dried fruits and nuts.",
+  "dateOfManufacture" : "2026-06-22",
+  "price" : 1.99,
+  "category" : "Food - Snacks"
+}, {
+  "id" : 25,
+  "name" : "Mediterranean Chickpea Salad",
+  "description" : "A refreshing salad with chickpeas, cucumber, tomatoes, and a light vinaigrette dressing.",
+  "dateOfManufacture" : "2026-03-27",
+  "price" : 5.99,
+  "category" : "Food - Salads"
+}, {
+  "id" : 26,
+  "name" : "Smart Thermostat with Wi-Fi",
+  "description" : "Wi-Fi enabled thermostat that learns your habits.",
+  "dateOfManufacture" : "2026-10-03",
+  "price" : 169.99,
+  "category" : "Smart Home"
+}, {
+  "id" : 27,
+  "name" : "Rainbow Veggie Chips",
+  "description" : "Colorful veggie chips made from beets, carrots, and sweet potatoes.",
+  "dateOfManufacture" : "2026-05-11",
+  "price" : 3.29,
+  "category" : "Food - Snacks"
+}, {
+  "id" : 28,
+  "name" : "Noise-Canceling Earbuds",
+  "description" : "Wireless earbuds designed for immersive sound experience.",
+  "dateOfManufacture" : "2026-07-08",
+  "price" : 79.99,
+  "category" : "Audio"
+}, {
+  "id" : 29,
+  "name" : "Pet Caress Brush",
+  "description" : "Gentle brush for removing loose fur from pets.",
+  "dateOfManufacture" : "2026-02-24",
+  "price" : 12.99,
+  "category" : "Pets"
+}, {
+  "id" : 30,
+  "name" : "Handmade Leather Journal",
+  "description" : "Beautiful leather-bound journal for writing and sketching.",
+  "dateOfManufacture" : "2026-06-07",
+  "price" : 39.99,
+  "category" : "Books"
+}, {
+  "id" : 31,
+  "name" : "Cheese Stuffed Jalapenos",
+  "description" : "Spicy jalapenos stuffed with cheese, ideal for appetizers.",
+  "dateOfManufacture" : "2026-04-16",
+  "price" : 5.99,
+  "category" : "Food - Snacks"
+}, {
+  "id" : 32,
+  "name" : "Herbed Goat Cheese",
+  "description" : "Tangy goat cheese infused with herbs, perfect for snacking.",
+  "dateOfManufacture" : "2026-02-02",
+  "price" : 5.49,
+  "category" : "Food - Cheese"
+}, {
+  "id" : 33,
+  "name" : "Spicy Tuna Sushi Kit",
+  "description" : "Everything you need to make delicious spicy tuna rolls at home.",
+  "dateOfManufacture" : "2025-12-14",
+  "price" : 8.99,
+  "category" : "Food - Prepared Meals"
+}, {
+  "id" : 34,
+  "name" : "Luxury Memory Foam Mattress Topper",
+  "description" : "Adds extra comfort to your mattress for a better night's sleep.",
+  "dateOfManufacture" : "2026-01-03",
+  "price" : 129.99,
+  "category" : "Home"
+}, {
+  "id" : 35,
+  "name" : "Chickpea Pancakes",
+  "description" : "Savory pancakes made with chickpea flour, high in protein.",
+  "dateOfManufacture" : "2026-10-18",
+  "price" : 4.99,
+  "category" : "Food - Frozen"
+}, {
+  "id" : 36,
+  "name" : "Spinach and Cheese Stuffed Shells",
+  "description" : "Delicious pasta shells filled with spinach and cheese",
+  "dateOfManufacture" : "2026-02-18",
+  "price" : 5.99,
+  "category" : "Food - Frozen Meals"
+}, {
+  "id" : 37,
+  "name" : "Cordless Water Flosser",
+  "description" : "Rechargeable water flosser for dental hygiene.",
+  "dateOfManufacture" : "2026-04-06",
+  "price" : 49.99,
+  "category" : "Health"
+}, {
+  "id" : 38,
+  "name" : "Coconut Yogurt",
+  "description" : "Creamy yogurt made from coconut milk, dairy-free and delicious.",
+  "dateOfManufacture" : "2026-02-04",
+  "price" : 3.89,
+  "category" : "Food - Dairy Alternatives"
+}, {
+  "id" : 39,
+  "name" : "Adjustable Kneeling Pad",
+  "description" : "Comfortable kneeling pad for gardening or home projects.",
+  "dateOfManufacture" : "2026-08-22",
+  "price" : 18.99,
+  "category" : "Garden"
+}, {
+  "id" : 40,
+  "name" : "Non-Stick Grill Pan",
+  "description" : "Heavy-duty grill pan for indoor grilling.",
+  "dateOfManufacture" : "2026-06-30",
+  "price" : 39.99,
+  "category" : "Kitchen"
+}, {
+  "id" : 41,
+  "name" : "Dark Chocolate Tart",
+  "description" : "Decadent tart made with rich dark chocolate.",
+  "dateOfManufacture" : "2026-01-28",
+  "price" : 6.29,
+  "category" : "Food - Desserts"
+}, {
+  "id" : 42,
+  "name" : "Oven-Baked Chicken Tenders",
+  "description" : "Crispy and juicy chicken tenders, perfect for dipping.",
+  "dateOfManufacture" : "2026-03-03",
+  "price" : 6.99,
+  "category" : "Food - Meat"
+}, {
+  "id" : 43,
+  "name" : "Voice-Controlled Speaker",
+  "description" : "Smart speaker with Alexa and music streaming features.",
+  "dateOfManufacture" : "2026-05-02",
+  "price" : 99.99,
+  "category" : "Audio"
+}, {
+  "id" : 44,
+  "name" : "Electric Pressure Cooker",
+  "description" : "Multi-function pressure cooker that can sauté, steam, and slow cook.",
+  "dateOfManufacture" : "2026-01-21",
+  "price" : 89.99,
+  "category" : "Kitchen"
+}, {
+  "id" : 45,
+  "name" : "Digital Wireless Camera",
+  "description" : "Secure digital wireless security camera system.",
+  "dateOfManufacture" : "2026-07-01",
+  "price" : 199.99,
+  "category" : "Home Security"
+}, {
+  "id" : 46,
+  "name" : "Mechanical Pencil Set",
+  "description" : "Precision pencils for drawing, sketching, and writing.",
+  "dateOfManufacture" : "2026-08-14",
+  "price" : 19.99,
+  "category" : "Office"
+}, {
+  "id" : 47,
+  "name" : "Whipped Cream Cheese",
+  "description" : "Light and fluffy cream cheese, perfect for bagels or cooking.",
+  "dateOfManufacture" : "2026-06-08",
+  "price" : 2.99,
+  "category" : "Food - Dairy"
+}, {
+  "id" : 48,
+  "name" : "Dog Car Seat Cover",
+  "description" : "Waterproof cover to protect car seats from pet hair and dirt.",
+  "dateOfManufacture" : "2026-08-15",
+  "price" : 39.99,
+  "category" : "Pets"
+}, {
+  "id" : 49,
+  "name" : "Digital Camera",
+  "description" : "Compact digital camera with 20MP resolution.",
+  "dateOfManufacture" : "2026-01-12",
+  "price" : 299.99,
+  "category" : "Electronics"
+}, {
+  "id" : 50,
+  "name" : "Zucchini",
+  "description" : "Fresh zucchini, versatile for grilling or sautéing.",
+  "dateOfManufacture" : "2026-11-01",
+  "price" : 0.79,
+  "category" : "Food - Produce"
+}, {
+  "id" : 51,
+  "name" : "Adjustable Window Blind",
+  "description" : "Customizable window cover for light control and privacy.",
+  "dateOfManufacture" : "2026-02-24",
+  "price" : 49.99,
+  "category" : "Home"
+}, {
+  "id" : 52,
+  "name" : "Adjustable Skipping Rope",
+  "description" : "Durable skipping rope with adjustable length for workouts.",
+  "dateOfManufacture" : "2026-05-01",
+  "price" : 12.99,
+  "category" : "Fitness"
+}, {
+  "id" : 53,
+  "name" : "Eco-Friendly Yoga Mat",
+  "description" : "Made from biodegradable materials for eco-conscious yogis.",
+  "dateOfManufacture" : "2026-01-03",
+  "price" : 39.99,
+  "category" : "Fitness"
+}, {
+  "id" : 54,
+  "name" : "Toy Building Set",
+  "description" : "Creative building set for kids to spark imagination.",
+  "dateOfManufacture" : "2026-02-22",
+  "price" : 29.99,
+  "category" : "Toys"
+}, {
+  "id" : 55,
+  "name" : "Dual Function Electric Skillet",
+  "description" : "Skillet that can fry, grill, and sauté with ease.",
+  "dateOfManufacture" : "2026-08-23",
+  "price" : 59.99,
+  "category" : "Kitchen"
+}, {
+  "id" : 56,
+  "name" : "Cinnamon Roll Dough",
+  "description" : "Ready-to-bake cinnamon roll dough for easy breakfasts.",
+  "dateOfManufacture" : "2026-10-22",
+  "price" : 4.49,
+  "category" : "Food - Bakery"
+}, {
+  "id" : 57,
+  "name" : "Classic Slim Fit Shirt",
+  "description" : "A tailored slim fit shirt for a polished look at work.",
+  "dateOfManufacture" : "2026-04-18",
+  "price" : 49.99,
+  "category" : "Clothing - Shirts"
+}, {
+  "id" : 58,
+  "name" : "Portable Pet Pooper Scooper",
+  "description" : "Compact scooper for easy waste clean-up during walks.",
+  "dateOfManufacture" : "2025-11-30",
+  "price" : 12.99,
+  "category" : "Pets"
+}, {
+  "id" : 59,
+  "name" : "Kids' Activity Book",
+  "description" : "Fun book filled with puzzles and games for kids.",
+  "dateOfManufacture" : "2026-08-18",
+  "price" : 14.99,
+  "category" : "Books"
+}, {
+  "id" : 60,
+  "name" : "Sun Protection Clothing",
+  "description" : "UV-blocking clothing for outdoor activities.",
+  "dateOfManufacture" : "2026-04-10",
+  "price" : 44.99,
+  "category" : "Clothing"
+}, {
+  "id" : 61,
+  "name" : "Cheddar Cheese Crackers",
+  "description" : "Crunchy crackers topped with real cheddar cheese flavor.",
+  "dateOfManufacture" : "2026-01-17",
+  "price" : 2.29,
+  "category" : "Food - Snacks"
+}, {
+  "id" : 62,
+  "name" : "Magnetic Screen Door",
+  "description" : "Keep bugs out while allowing fresh air in during summer.",
+  "dateOfManufacture" : "2025-12-31",
+  "price" : 24.99,
+  "category" : "Outdoor"
+}, {
+  "id" : 63,
+  "name" : "Inflatable Pool Float",
+  "description" : "Fun inflatable float for lounging in the pool or beach.",
+  "dateOfManufacture" : "2026-03-17",
+  "price" : 29.99,
+  "category" : "Outdoor"
+}, {
+  "id" : 64,
+  "name" : "Thai Peanut Noodles",
+  "description" : "Noodles tossed in a spicy Thai peanut sauce.",
+  "dateOfManufacture" : "2026-03-25",
+  "price" : 4.99,
+  "category" : "Food - Pasta"
+}, {
+  "id" : 65,
+  "name" : "Garden Hose Reel",
+  "description" : "Compact hose reel to keep your garden tidy.",
+  "dateOfManufacture" : "2026-08-14",
+  "price" : 49.99,
+  "category" : "Garden"
+}, {
+  "id" : 66,
+  "name" : "Honey BBQ Ribs",
+  "description" : "Tender ribs smothered in a honey barbecue sauce.",
+  "dateOfManufacture" : "2026-05-27",
+  "price" : 12.99,
+  "category" : "Food - Meat"
+}, {
+  "id" : 67,
+  "name" : "Wooden Blocks",
+  "description" : "Classic wooden building blocks for toddlers.",
+  "dateOfManufacture" : "2025-12-04",
+  "price" : 24.99,
+  "category" : "Toys"
+}, {
+  "id" : 68,
+  "name" : "Adjustable Laptop Stand",
+  "description" : "Ergonomic stand for laptops to improve posture while working.",
+  "dateOfManufacture" : "2026-06-10",
+  "price" : 29.99,
+  "category" : "Office"
+}, {
+  "id" : 69,
+  "name" : "Pet Carrier",
+  "description" : "Comfortable pet carrier for travel and vet visits.",
+  "dateOfManufacture" : "2026-01-28",
+  "price" : 39.99,
+  "category" : "Pets"
+}, {
+  "id" : 70,
+  "name" : "Mini Air Hockey Table",
+  "description" : "Fun tabletop air hockey for home or office.",
+  "dateOfManufacture" : "2026-04-14",
+  "price" : 39.99,
+  "category" : "Toys"
+}, {
+  "id" : 71,
+  "name" : "Tea Set with Infuser",
+  "description" : "Elegant tea set that includes an infuser for brewing.",
+  "dateOfManufacture" : "2026-09-30",
+  "price" : 34.99,
+  "category" : "Kitchen"
+}, {
+  "id" : 72,
+  "name" : "Sous Vide Cooker",
+  "description" : "Precision cooker for perfect sous vide cooking.",
+  "dateOfManufacture" : "2026-05-30",
+  "price" : 79.99,
+  "category" : "Kitchen"
+}, {
+  "id" : 73,
+  "name" : "Miso Soup Starter",
+  "description" : "Miso paste for making traditional Japanese miso soup.",
+  "dateOfManufacture" : "2026-05-18",
+  "price" : 2.99,
+  "category" : "Food - Soups"
+}, {
+  "id" : 74,
+  "name" : "Electric Heat Press Machine",
+  "description" : "Ideal for creating custom designs on t-shirts and fabrics.",
+  "dateOfManufacture" : "2026-05-09",
+  "price" : 99.99,
+  "category" : "Crafts"
+}, {
+  "id" : 75,
+  "name" : "Cotton Tote Bag Set",
+  "description" : "Reusable tote bags for shopping and eco-friendly living.",
+  "dateOfManufacture" : "2026-03-10",
+  "price" : 29.99,
+  "category" : "Accessories"
+}, {
+  "id" : 76,
+  "name" : "Almond Butter Granola Bars",
+  "description" : "Crunchy granola bars made with almond butter, oats, and honey, perfect for on-the-go snacking.",
+  "dateOfManufacture" : "2026-01-18",
+  "price" : 4.99,
+  "category" : "Food - Snacks"
+}, {
+  "id" : 77,
+  "name" : "Herbal Tea Infuser",
+  "description" : "Infuser for brewing loose-leaf herbal teas easily.",
+  "dateOfManufacture" : "2026-03-28",
+  "price" : 9.99,
+  "category" : "Kitchen"
+}, {
+  "id" : 78,
+  "name" : "Collapsible Pet Dog Bowl",
+  "description" : "Travel-friendly dog bowl that is collapsible for easy storage.",
+  "dateOfManufacture" : "2025-11-05",
+  "price" : 9.99,
+  "category" : "Pets"
+}, {
+  "id" : 79,
+  "name" : "Lemon Lime Sparkling Water",
+  "description" : "Refreshing sparkling water with lemon and lime flavor",
+  "dateOfManufacture" : "2026-04-06",
+  "price" : 1.99,
+  "category" : "Food - Beverages"
+}, {
+  "id" : 80,
+  "name" : "Self-Watering Planters",
+  "description" : "Planters with a self-watering feature for easy care.",
+  "dateOfManufacture" : "2026-10-25",
+  "price" : 49.99,
+  "category" : "Garden"
+}, {
+  "id" : 81,
+  "name" : "Rechargeable Electric Screwdriver",
+  "description" : "Convenient electric screwdriver for DIY projects at home.",
+  "dateOfManufacture" : "2026-09-26",
+  "price" : 39.99,
+  "category" : "Tools"
+}, {
+  "id" : 82,
+  "name" : "LED Desk Lamp",
+  "description" : "Dimmable LED desk lamp with USB charging port.",
+  "dateOfManufacture" : "2026-01-03",
+  "price" : 35.0,
+  "category" : "Home"
+}, {
+  "id" : 83,
+  "name" : "Foldable Picnic Table",
+  "description" : "Lightweight and portable picnic table for outdoor use.",
+  "dateOfManufacture" : "2025-11-16",
+  "price" : 49.99,
+  "category" : "Outdoor"
+}, {
+  "id" : 84,
+  "name" : "Chocolate Hazelnut Spread",
+  "description" : "A creamy spread made with chocolate and hazelnuts, perfect for toast.",
+  "dateOfManufacture" : "2025-12-02",
+  "price" : 5.99,
+  "category" : "Food - Spreads"
+}, {
+  "id" : 85,
+  "name" : "Fitness Jump Rope with LCD Counter",
+  "description" : "Weighted jump rope that counts jumps and calories burned.",
+  "dateOfManufacture" : "2026-06-15",
+  "price" : 15.99,
+  "category" : "Fitness"
+}, {
+  "id" : 86,
+  "name" : "Outdoor Portable Fire Pit",
+  "description" : "Compact fire pit for campfires and gatherings.",
+  "dateOfManufacture" : "2026-02-04",
+  "price" : 149.99,
+  "category" : "Outdoor"
+}, {
+  "id" : 87,
+  "name" : "Men's Waterproof Hiking Boots",
+  "description" : "Durable boots designed for outdoor hiking and activities.",
+  "dateOfManufacture" : "2026-10-12",
+  "price" : 89.99,
+  "category" : "Footwear"
+}, {
+  "id" : 88,
+  "name" : "Tofu",
+  "description" : "Firm tofu, a great plant-based protein option.",
+  "dateOfManufacture" : "2026-04-30",
+  "price" : 2.49,
+  "category" : "Food - Meat Alternatives"
+}, {
+  "id" : 89,
+  "name" : "Vintage Graphic Tee",
+  "description" : "Retro-style graphic tee with a soft wash for a vintage feel.",
+  "dateOfManufacture" : "2026-03-20",
+  "price" : 25.99,
+  "category" : "Clothing - Tops"
+}, {
+  "id" : 90,
+  "name" : "Sliced Cucumbers",
+  "description" : "Freshly sliced cucumbers, great for salads or snacking.",
+  "dateOfManufacture" : "2026-09-08",
+  "price" : 1.29,
+  "category" : "Food - Produce"
+}, {
+  "id" : 91,
+  "name" : "Smart Scale",
+  "description" : "Wi-Fi smart scale for tracking weight and BMI.",
+  "dateOfManufacture" : "2026-05-27",
+  "price" : 59.99,
+  "category" : "Health"
+}, {
+  "id" : 92,
+  "name" : "Reflective Safety Vest",
+  "description" : "Bright safety vest for outdoor visibility during any activity.",
+  "dateOfManufacture" : "2026-04-18",
+  "price" : 19.99,
+  "category" : "Safety"
+}, {
+  "id" : 93,
+  "name" : "Crafting Kit",
+  "description" : "Complete crafting kit for kids and adults.",
+  "dateOfManufacture" : "2026-07-09",
+  "price" : 29.99,
+  "category" : "Art Supplies"
+}, {
+  "id" : 94,
+  "name" : "Blender Bottle",
+  "description" : "Portable mixer bottle for smoothies and protein shakes.",
+  "dateOfManufacture" : "2025-12-18",
+  "price" : 12.99,
+  "category" : "Fitness"
+}, {
+  "id" : 95,
+  "name" : "Mini Projector",
+  "description" : "Portable projector with 1080p resolution for movies.",
+  "dateOfManufacture" : "2026-07-08",
+  "price" : 169.99,
+  "category" : "Electronics"
+}, {
+  "id" : 96,
+  "name" : "Travel Beach Blanket",
+  "description" : "Sand-resistant and compact for outdoor and beach use.",
+  "dateOfManufacture" : "2025-11-27",
+  "price" : 29.99,
+  "category" : "Outdoor"
+}, {
+  "id" : 97,
+  "name" : "Spicy Chicken Wings",
+  "description" : "Wide range of flavored wings, perfect for parties or casual snacking.",
+  "dateOfManufacture" : "2026-06-11",
+  "price" : 9.99,
+  "category" : "Food - Meat"
+}, {
+  "id" : 98,
+  "name" : "Non-Toxic Crayons for Kids",
+  "description" : "Safe and vibrant crayons for children's art projects.",
+  "dateOfManufacture" : "2026-08-10",
+  "price" : 10.99,
+  "category" : "Toys"
+}, {
+  "id" : 99,
+  "name" : "Cinnamon Sugar Popcorn",
+  "description" : "Sweet popcorn coated in a mixture of cinnamon and sugar.",
+  "dateOfManufacture" : "2026-10-11",
+  "price" : 2.89,
+  "category" : "Food - Snacks"
+}, {
+  "id" : 100,
+  "name" : "Pineapple Coconut Bars",
+  "description" : "Refreshing dessert bars made with pineapple and coconut.",
+  "dateOfManufacture" : "2026-03-25",
+  "price" : 3.79,
+  "category" : "Food - Snacks"
+} ]
