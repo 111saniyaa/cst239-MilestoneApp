@@ -1,6 +1,7 @@
 package edu.gcu.cst239.sharma.saniya.milestone_app.services;
 
 import java.nio.file.*;
+import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
 import java.util.List;
 
@@ -74,6 +75,13 @@ public class ProductMapperTest {
         );
     }
 
+    @Test
+    void convertsIsoDateTextToLocalDate() {
+        Product product = ProductMapper.toProduct(ice_cube_tray);
+
+        assertEquals(LocalDate.of(2023, 1, 1), product.getDateOfManufacture());
+    }
+
     @Test 
     void defaultBlankCategoryIsHandled() {
         ProductDto productDto = new ProductDto(
@@ -104,21 +112,14 @@ public class ProductMapperTest {
         assertThrows(IllegalArgumentException.class, () -> ProductMapper.toProduct(null));
     }
 
-    // adding a Product
-    
-    
-    //finding or searching for a Product
-    
-    
-    //updating a Product
-    
-    
-    //removing a Product
+    @Test
+    void mapsProductBackToDtoAndPreservesValues() {
+        Product product = ProductMapper.toProduct(office_chair);
 
+        ProductDto mappedDto = ProductMapper.toProductDto(product);
 
-
-
-
+        assertEquals(office_chair, mappedDto);
+    }
 
 
 }
