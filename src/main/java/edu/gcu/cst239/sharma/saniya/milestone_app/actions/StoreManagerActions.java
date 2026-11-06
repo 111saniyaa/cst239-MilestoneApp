@@ -172,12 +172,12 @@ public class StoreManagerActions {
 
                 case 6:
                     System.out.println("You choose to save inventory to file.");
-                    System.out.println("This is milestone #1. No actual fuctionality has been implemented yet.");  
+                    store.getInventoryManager().saveInventoryToJson();
 
                     break;
                 case 7:
                     System.out.println("You choose to load inventory from file.");
-                    System.out.println("This is milestone #1. No actual fuctionality has been implemented yet.");  
+                    store.getInventoryManager().readInventoryFromJson();
                     
                     break;
                 case 0:

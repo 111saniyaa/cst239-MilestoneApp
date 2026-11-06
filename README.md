@@ -1,3 +1,1 @@
 ﻿# Java-II-Milestone Application
-
-Updated work till Milestone 2

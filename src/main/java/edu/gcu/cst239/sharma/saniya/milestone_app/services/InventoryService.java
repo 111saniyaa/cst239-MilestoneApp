@@ -96,4 +96,8 @@ public interface InventoryService {
     List<InventoryItem> getInventoryItemsSortedByName();
     List<InventoryItem> getInventoryItemsSortedByPrice();
     List<InventoryItem> getInventoryItemsSortedByDate();
+
+    // JSON data handling
+    void readInventoryFromJson();
+    void saveInventoryToJson();
 }
