@@ -1,5 +1,6 @@
 package edu.gcu.cst239.sharma.saniya.milestone_app.services;
 
+import java.nio.file.Path;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.ArrayList;
@@ -10,10 +11,18 @@ import java.util.Comparator;
 
 import edu.gcu.cst239.sharma.saniya.milestone_app.models.InventoryItem;
 import edu.gcu.cst239.sharma.saniya.milestone_app.models.Product;
+import edu.gcu.cst239.sharma.saniya.milestone_app.models.ProductDto;
 
 public class InventoryManager implements InventoryService{
 
     private final List<InventoryItem> inventory;   
+
+
+    // Milestone 4: Loading Data from JSON Files
+    ProductJsonService productJsonService = new ProductJsonService();
+
+    Path productsFilePath = Path.of("src", "main", "resources", "data", "products.json");
+    Path inventoryFilePath = Path.of("src", "main", "resources", "data", "inventory.json");
 
     public InventoryManager() {
         inventory = new ArrayList<>();
@@ -32,65 +41,14 @@ public class InventoryManager implements InventoryService{
                 throw new IllegalArgumentException("Inventory items and their products cannot be null");
             }
         }
-
     }
 
 
 
     private void initializeInventory(){
+        List<InventoryItem> loadedInventory = productJsonService.readInventory(productsFilePath, inventoryFilePath);
+        inventory.addAll(loadedInventory);
 
-        Product laptop = Product.builder()
-                .id(1)
-                .name("Lenovo IdeaPad 5")
-                .description("15-inch laptop with 16GB RAM and 512GB SSD")
-                .dateOfManufacture(LocalDate.of(2026, 8, 10))
-                .price(699.99)
-                .category("electronics")
-                .build();
-
-        Product headphones = Product.builder()
-                .id(2)
-                .name("Sony WH-1000XM6")
-                .description("Wireless noise-canceling over-ear headphones")
-                .dateOfManufacture(LocalDate.of(2026, 7, 22))
-                .price(399.99)
-                .category("electronics")
-                .build();
-
-        Product coffeeMaker = Product.builder()
-                .id(3)
-                .name("Breville Coffee Maker")
-                .description("Programmable 12-cup drip coffee maker")
-                .dateOfManufacture(LocalDate.of(2026, 6, 18))
-                .price(149.99)
-                .category("appliances")
-                .build();
-
-        Product runningShoes = Product.builder()
-                .id(4)
-                .name("Nike Air Zoom Pegasus")
-                .description("Lightweight running shoes with responsive cushioning")
-                .dateOfManufacture(LocalDate.of(2026, 5, 30))
-                .price(129.99)
-                .category("footwear")
-                .build();
-
-        Product backpack = Product.builder()
-                .id(5)
-                .name("North Face Travel Backpack")
-                .description("Durable 30-liter backpack with laptop compartment")
-                .dateOfManufacture(LocalDate.of(2026, 4, 14))
-                .price(119.99)
-                .category("accessories")
-                .build();
-
-
-
-        inventory.add(new InventoryItem(laptop, 100));
-        inventory.add(new InventoryItem(headphones, 250));
-        inventory.add(new InventoryItem(coffeeMaker, 30));  
-        inventory.add(new InventoryItem(runningShoes, 200));
-        inventory.add(new InventoryItem(backpack, 500));
     }
 
 
