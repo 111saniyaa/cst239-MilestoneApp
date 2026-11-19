@@ -693,9 +693,9 @@
   "category" : "Food - Snacks"
 }, {
   "id" : 100,
-  "name" : "Pineapple Coconut Bars",
+  "name" : "ineapple Coconut Bars",
   "description" : "Refreshing dessert bars made with pineapple and coconut.",
   "dateOfManufacture" : "2026-03-25",
-  "price" : 3.79,
-  "category" : "Food - Snacks"
+  "price" : 5.0,
+  "category" : "food"
 } ]
