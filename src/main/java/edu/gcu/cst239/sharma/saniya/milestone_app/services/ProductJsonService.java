@@ -5,6 +5,9 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 
+
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+
 import edu.gcu.cst239.sharma.saniya.milestone_app.models.Product;
 import edu.gcu.cst239.sharma.saniya.milestone_app.models.ProductDto;
 import edu.gcu.cst239.sharma.saniya.milestone_app.models.InventoryItem;
@@ -23,7 +26,9 @@ public class ProductJsonService {
 
 
     // object mapper for JSON serialization and deserialization
-    private final ObjectMapper objectMapper = new ObjectMapper().enable(SerializationFeature.INDENT_OUTPUT);
+    private final ObjectMapper objectMapper = new ObjectMapper()
+                                                    .registerModule(new JavaTimeModule())
+                                                    .enable(SerializationFeature.INDENT_OUTPUT);
 
     public List<ProductDto> readProductDtos(Path filePath) {
         try {
